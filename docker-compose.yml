@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+
+    phpapp:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: SAEphp
+        volumes:
+          - './projet:/var/www/html/'
+        image: php:8.2-apache
+        ports:
+          - '8181:80'
+
+
+        
